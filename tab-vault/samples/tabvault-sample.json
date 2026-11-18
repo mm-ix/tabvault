@@ -1,0 +1,68 @@
+{
+  "format": "tabvault",
+  "version": 1,
+  "exportedAt": "2026-09-10T10:26:00+08:00",
+  "snapshots": [
+    {
+      "name": "2026-09-10 10:26",
+      "createdAt": 1789007160000,
+      "groups": [
+        {
+          "title": "工作",
+          "color": "blue",
+          "collapsed": false,
+          "tabs": [
+            { "url": "https://mail.example.com/", "title": "工作邮箱", "pinned": false },
+            { "url": "https://docs.example.com/doc/weekly", "title": "本周周报", "pinned": false },
+            { "url": "https://calendar.example.com/", "title": "团队日历", "pinned": false }
+          ]
+        },
+        {
+          "title": "资讯",
+          "color": "red",
+          "collapsed": true,
+          "tabs": [
+            { "url": "https://news.example.com/tech", "title": "科技新闻", "pinned": false },
+            { "url": "https://blog.example.org/weekly", "title": "技术周刊", "pinned": false }
+          ]
+        },
+        {
+          "unnamed": true,
+          "tabs": [
+            { "url": "https://github.com/", "title": "GitHub", "pinned": true },
+            { "url": "https://www.wikipedia.org/", "title": "维基百科", "pinned": false }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "毕业论文资料",
+      "createdAt": 1788872700000,
+      "groups": [
+        {
+          "title": "论文",
+          "color": "purple",
+          "collapsed": false,
+          "tabs": [
+            { "url": "https://overleaf.com/project/demo", "title": "论文草稿", "pinned": false },
+            { "url": "https://scholar.google.com/", "title": "学术搜索", "pinned": false }
+          ]
+        },
+        {
+          "title": "文献",
+          "color": "cyan",
+          "collapsed": false,
+          "tabs": [
+            { "url": "https://arxiv.org/abs/2401.00001", "title": "A Survey of Tab Managers", "pinned": false }
+          ]
+        },
+        {
+          "unnamed": true,
+          "tabs": [
+            { "url": "https://lib.example.edu.cn/", "title": "学校图书馆", "pinned": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

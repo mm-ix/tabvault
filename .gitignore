@@ -1,0 +1,7 @@
+.git_nested_*
+packages/
+test-artifacts/
+bin/
+obj/
+*.nupkg
+*.log

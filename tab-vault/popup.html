@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light dark">
+  <title>标签保险箱</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <!-- 顶栏：标题 + 设置入口 -->
+  <header class="app-header">
+    <h1 class="app-title" data-str="appTitle">标签保险箱</h1>
+    <button id="btn-settings" class="icon-btn" type="button"
+            data-str-title="settingsTitle" aria-label="设置" aria-expanded="false">⚙</button>
+  </header>
+
+  <!-- 设置折叠区（简版设置页，见需求 F5） -->
+  <section id="settings-panel" class="settings-panel" hidden>
+    <div class="settings-row">
+      <span data-str="langLabel">语言</span>
+      <span class="settings-value" data-str="langValue">中文</span>
+    </div>
+    <label class="settings-row settings-toggle">
+      <span data-str="saveUngroupedLabel">保存散标签</span>
+      <input type="checkbox" id="toggle-ungrouped" checked>
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <p class="settings-hint" data-str="saveUngroupedHint">
+      关闭后，不属于任何分组的普通标签将不保存；固定（pinned）标签始终保存。
+    </p>
+  </section>
+
+  <!-- 保存区：主按钮 + 状态提示 -->
+  <section class="save-area">
+    <button id="btn-save" class="btn-save" type="button">
+      <span class="btn-save-icon" aria-hidden="true">💾</span><span id="save-btn-text" data-str="saveBtn">保存当前窗口</span>
+    </button>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- 快照列表（倒序，新的在上） -->
+  <main id="list" class="list"></main>
+  <div id="empty" class="empty" hidden data-str="emptyText">
+    还没有快照，点击上方按钮保存当前窗口
+  </div>
+
+  <!-- 底部：导出全部 / 导入 -->
+  <footer class="footer">
+    <button id="btn-export-all" class="btn btn-footer" type="button">
+      <span aria-hidden="true">📤</span> <span data-str="exportAllBtn">导出全部</span>
+    </button>
+    <button id="btn-import" class="btn btn-footer" type="button">
+      <span aria-hidden="true">📥</span> <span data-str="importBtn">导入</span>
+    </button>
+    <input type="file" id="file-input" accept=".json,application/json" hidden>
+  </footer>
+
+  <!-- 删除二次确认（弹窗内遮罩，不用系统对话框，见需求 F2） -->
+  <div id="confirm-overlay" class="confirm-overlay" hidden>
+    <div class="confirm-box" role="dialog" aria-modal="true" aria-labelledby="confirm-text">
+      <p class="confirm-title" data-str="confirmTitle">删除快照</p>
+      <p id="confirm-text" class="confirm-text"></p>
+      <div class="confirm-actions">
+        <button id="btn-cancel-delete" class="btn" type="button" data-str="cancelBtn">取消</button>
+        <button id="btn-confirm-delete" class="btn btn-danger" type="button" data-str="confirmDeleteBtn">删除</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

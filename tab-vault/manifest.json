@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "标签保险箱",
+  "version": "1.0.0",
+  "description": "把当前窗口的标签页（含标签分组结构）保存为可命名快照，一键按原分组恢复，支持导出/导入 JSON 跨设备迁移。",
+  "minimum_chrome_version": "116",
+  "permissions": ["tabs", "tabGroups", "downloads", "storage"],
+  "action": {
+    "default_title": "标签保险箱",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
